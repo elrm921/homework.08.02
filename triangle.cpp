@@ -11,7 +11,8 @@ Triangle::Triangle() : Figure("Треугольник", 3) {
     this->B = 60;            
     this->C = 80;
     if (!check()) {
-        throw FigureException("сумма углов не равнa 180", *this);
+        desc = printstr();
+        throw FigureException("сумма углов не равнa 180", desc);
     }
 }
 Triangle::Triangle(int a, int b, int c, int A, int B, int C) : Figure("Треугольник", 3)  {
@@ -22,7 +23,8 @@ Triangle::Triangle(int a, int b, int c, int A, int B, int C) : Figure("Треу�
     this->B = B;            
     this->C = C;
     if (!check()) {
-        throw FigureException("сумма углов не равнa 180", *this);
+        desc = printstr();
+        throw FigureException("сумма углов не равнa 180", desc);
     }
 }
 Triangle::Triangle(std::string name, int a, int b, int c, int A, int B, int C) : Figure(name, 3) {
@@ -33,7 +35,8 @@ Triangle::Triangle(std::string name, int a, int b, int c, int A, int B, int C) :
     this->B = B;            
     this->C = C;
     if (!check()) {
-        throw FigureException("сумма углов не равнa 180", *this);
+        desc = printstr();
+        throw FigureException("сумма углов не равнa 180", desc);
     }
 }
 std::string Triangle::print_side_values() {

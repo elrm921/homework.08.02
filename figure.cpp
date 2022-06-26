@@ -14,6 +14,10 @@ void Figure::print() {
     std::cout << " стороны: " << print_side_values();
     std::cout << " углы: " << print_angle_values();
 }
+std::string Figure::printstr() {
+    return name + " стороны: " + print_side_values() + " углы: " +  print_angle_values();
+}
+
 std::string Figure::print_side_values() {
     return std::string();
 }

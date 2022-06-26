@@ -13,7 +13,8 @@ Quadrangle::Quadrangle() : Figure("Четырехугольник", 4) {
     this->C = 60;
     this->D = 80;
     if (!check()) {
-        throw FigureException("сумма углов не равнa 360", *this);
+        desc = printstr();
+        throw FigureException("сумма углов не равнa 360", desc);
     }
 }
 Quadrangle::Quadrangle(int a, int b, int c, int d, int A, int B, int C, int D) : Figure("Четырехугольник", 4) {
@@ -26,7 +27,8 @@ Quadrangle::Quadrangle(int a, int b, int c, int d, int A, int B, int C, int D) :
     this->C = C;
     this->D = D;
     if (!check()) {
-        throw FigureException("сумма углов не равнa 360", *this);
+        desc = printstr();
+        throw FigureException("сумма углов не равнa 360", desc);
     }
 }
 Quadrangle::Quadrangle(std::string name, int a, int b, int c, int d, int A, int B, int C, int D) : Figure(name, 4) {
@@ -39,7 +41,8 @@ Quadrangle::Quadrangle(std::string name, int a, int b, int c, int d, int A, int 
     this->C = C;
     this->D = D;
     if (!check()) {
-        throw FigureException("сумма углов не равнa 360", *this);
+        desc = printstr();
+        throw FigureException("сумма углов не равнa 360", desc);
     }
 }
 std::string Quadrangle::print_side_values() {

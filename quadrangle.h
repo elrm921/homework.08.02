@@ -14,4 +14,5 @@ class Quadrangle : public Figure {
     private:
         int a, b, c, d;
         int A, B, C, D;
+        std::string desc;
 };

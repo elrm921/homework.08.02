@@ -14,4 +14,5 @@ class Triangle : public Figure {
     private:
         int a, b, c;
         int A, B, C;
+        std::string desc;
 };

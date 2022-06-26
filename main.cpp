@@ -12,9 +12,7 @@
 #include "figure_exception.h"
 
 void print(Figure &f) {
-    std::cout << "Создан ";
-    f.print();
-    std::cout << "\n";
+    std::cout << "Создан " << f.printstr() << "\n";
 }
 
 int main() {
@@ -25,10 +23,7 @@ int main() {
         print(q0);
     }
     catch(FigureException e) {
-        std::cout << e.what();
-        e.print();
-        std::cout << e.reason();
-        std::cout << "\n";
+        std::cout << e.what() << "\n";
     }
     return 0;
 }

@@ -4,9 +4,6 @@
 
 class FigureException : std::domain_error {
     public:
-        FigureException(std::string str1, std::string str2);
-        std::string what();
-    private:
-        std::string reason;
-        std::string desc;
+        FigureException(std::string str);
+        std::string info();
 };

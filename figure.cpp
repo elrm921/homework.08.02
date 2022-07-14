@@ -9,11 +9,6 @@ Figure::Figure(std::string name, int sides) {
     this->name = name;
     this->sides = sides;
 }
-void Figure::print() {
-    std::cout << name;
-    std::cout << " стороны: " << print_side_values();
-    std::cout << " углы: " << print_angle_values();
-}
 std::string Figure::printstr() {
     return name + " стороны: " + print_side_values() + " углы: " +  print_angle_values();
 }

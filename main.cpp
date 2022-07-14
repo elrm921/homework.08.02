@@ -23,7 +23,7 @@ int main() {
         print(q0);
     }
     catch(FigureException e) {
-        std::cout << "Не был создан " << e.info() << "\n";
+        std::cout << "Не был создан " << e.what() << "\n";
     }
     return 0;
 }

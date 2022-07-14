@@ -4,7 +4,6 @@
 class Figure {
     public:
         Figure();
-        void print();
         std::string printstr() ;
         virtual std::string print_side_values();
         virtual std::string print_angle_values();

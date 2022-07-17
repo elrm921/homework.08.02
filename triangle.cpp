@@ -1,4 +1,3 @@
-#include <iostream>
 #include "figure.h"
 #include "triangle.h"
 #include "figure_exception.h"
@@ -39,12 +38,12 @@ Triangle::Triangle(std::string name, int a, int b, int c, int A, int B, int C) :
         throw FigureException(desc + " сумма углов не равнa 180");
     }
 }
-std::string Triangle::print_side_values() {
+std::string Triangle::print_side_values() const {
     return "a = " + std::to_string(a) + " b = " + std::to_string(b) + " c = " + std::to_string(c);
 }
-std::string Triangle::print_angle_values() {
+std::string Triangle::print_angle_values() const {
     return "A = " + std::to_string(A) + " B = " + std::to_string(B) + " C = " + std::to_string(C);
 }
-bool Triangle::check() {
+bool Triangle::check() const {
     return (A + B + C == 180 && a > 0 && b > 0 && c > 0);
 }

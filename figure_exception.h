@@ -1,5 +1,5 @@
 #pragma once
-#include "figure.h"
+#include <string>
 #include <stdexcept>
 
 class FigureException : public std::domain_error {

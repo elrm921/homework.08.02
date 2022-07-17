@@ -1,4 +1,3 @@
-#include <iostream>
 #include "figure.h"
 #include "quadrangle.h"
 #include "figure_exception.h"
@@ -45,12 +44,12 @@ Quadrangle::Quadrangle(std::string name, int a, int b, int c, int d, int A, int 
         throw FigureException(desc + " сумма углов не равнa 360");
     }
 }
-std::string Quadrangle::print_side_values() {
+std::string Quadrangle::print_side_values() const {
     return "a = " + std::to_string(a) + " b = " + std::to_string(b) + " c = " + std::to_string(c) + " d = " + std::to_string(d);
 }
-std::string Quadrangle::print_angle_values() {
+std::string Quadrangle::print_angle_values() const {
     return "A = " + std::to_string(A) + " B = " + std::to_string(B) + " C = " + std::to_string(C) + " D = " + std::to_string(D);
 }
-bool Quadrangle::check() {
+bool Quadrangle::check() const {
     return (A + B + C + D == 360 && a > 0 && b > 0 && c > 0 && d > 0);
 }

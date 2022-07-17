@@ -11,16 +11,19 @@
 #include "rhombus.h"
 #include "figure_exception.h"
 
-void print(Figure &f) {
+void print(const Figure &f) {
     std::cout << "Создан " << f.printstr() << "\n";
 }
 
 int main() {
     try {
-        Triangle t0;
-        print(t0);
-        Quadrangle q0;
-        print(q0);
+        print(RightTriangle(1, 2, 3, 30, 60));
+        print(IsoscelesTriangle(2, 1, 30, 90));
+        print(EquilateralTriangle(3));
+        print(Rectangle(1, 4));
+        print(Square(4));
+        print(Parallelogram(1, 4, 60, 120));
+        print(Rhombus(4, 60, 40));
     }
     catch(FigureException e) {
         std::cout << "Не был создан " << e.what() << "\n";

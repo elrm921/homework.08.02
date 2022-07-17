@@ -1,12 +1,12 @@
 #pragma once
-#include <iostream>
+#include <string>
 
 class Figure {
     public:
         Figure();
-        std::string printstr() ;
-        virtual std::string print_side_values();
-        virtual std::string print_angle_values();
+        std::string printstr() const;
+        virtual std::string print_side_values() const;
+        virtual std::string print_angle_values() const;
     protected:
         Figure(std::string name, int sides);
     private:
